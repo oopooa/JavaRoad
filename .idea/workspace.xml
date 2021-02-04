@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f0de45b-0d77-4e9b-8e98-e0d32a505db5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/leetcode-record/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode-record/src/main/java/com/opoa/TwoSum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode-record/src/test/java/com.opoa/TestTwoSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode-record/src/main/java/com/opoa/TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode-record/src/main/java/com/opoa/TwoSum.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,6 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612446718152</updated>
       <workItem from="1612446722679" duration="4952000" />
+      <workItem from="1612452182865" duration="17000" />
     </task>
     <servers />
   </component>
@@ -111,7 +110,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
