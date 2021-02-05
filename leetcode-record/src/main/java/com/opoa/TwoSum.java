@@ -25,6 +25,8 @@
 
 package com.opoa;
 
+import java.util.HashMap;
+
 /**
  * 001
  * @program: LeetCode->twoSum
@@ -35,7 +37,7 @@ package com.opoa;
 public class TwoSum {
 
     /**
-     * 暴力解法
+     * 暴力法
      */
     public static int[] solution1(int[] nums, int target) {
         for(int i = 0; i < nums.length; i++) {
@@ -44,6 +46,20 @@ public class TwoSum {
                     return new int[] {i, j};
                 }
             }
+        }
+        return new int[0];
+    }
+
+    /**
+     * 哈希法
+     */
+    public static int[] solution2(int[] nums, int target) {
+        HashMap<Integer, Integer> tempMap = new HashMap<Integer, Integer>(nums.length);
+        for (int i = 0; i < nums.length; ++i) {
+            if (tempMap.containsKey(target - nums[i])) {
+                return new int[]{tempMap.get(target - nums[i]), i};
+            }
+            tempMap.put(nums[i], i);
         }
         return new int[0];
     }
