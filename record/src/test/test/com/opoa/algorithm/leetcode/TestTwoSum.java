@@ -1,4 +1,4 @@
-package com.opoa;
+package com.opoa.algorithm.leetcode;
 
 import org.junit.Assert;
 import org.junit.Test;

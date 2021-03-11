@@ -23,7 +23,7 @@
  *
  */
 
-package com.opoa;
+package com.opoa.algorithm.leetcode;
 
 import java.util.HashMap;
 
