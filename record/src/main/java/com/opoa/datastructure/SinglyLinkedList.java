@@ -56,8 +56,8 @@ public class SinglyLinkedList<T> {
 
     /**
      * 根据下标获取一个结点
-     * @param index
-     * @return
+     * @param index 下标参数
+     * @return      对应结点
      */
     public Node getNode(int index) {
 
@@ -77,8 +77,8 @@ public class SinglyLinkedList<T> {
 
     /**
      * 根据元素值返回对应结点
-     * @param t
-     * @return
+     * @param t  要查找的元素值
+     * @return   对应结点
      */
     public Node getNode(T t) {
 
@@ -94,9 +94,9 @@ public class SinglyLinkedList<T> {
 
     /**
      * 在指定下标处插入一个结点
-     * @param t
-     * @param index
-     * @return
+     * @param t      要插入的元素
+     * @param index  要插入的下标
+     * @return       插入是否成功
      */
     public boolean insert(T t, int index) {
 
@@ -125,8 +125,8 @@ public class SinglyLinkedList<T> {
 
     /**
      * 使用头插法插入一个元素
-     * @param t
-     * @return
+     * @param t  要插入的元素
+     * @return   插入是否成功
      */
     public boolean insertFirst(T t) {
         return insert(t, 0);
@@ -134,8 +134,8 @@ public class SinglyLinkedList<T> {
 
     /**
      * 使用尾插法插入一个元素
-     * @param t
-     * @return
+     * @param t  要插入的元素
+     * @return   插入是否成功
      */
     public boolean insertLast(T t) {
         return insert(t, size);
@@ -143,8 +143,8 @@ public class SinglyLinkedList<T> {
 
     /**
      * 根据下标删除结点
-     * @param index
-     * @return
+     * @param index  要删除的下标参数
+     * @return       将要删除的结点
      */
     public Node remove(int index) {
 
@@ -172,8 +172,8 @@ public class SinglyLinkedList<T> {
 
     /**
      * 根据数据删除结点
-     * @param t
-     * @return
+     * @param t  要删除的数据
+     * @return   将要删除的结点
      */
     public Node remove(T t) {
         // 链表或元素为空 直接返回
@@ -194,7 +194,7 @@ public class SinglyLinkedList<T> {
 
     /**
      * 返回当前链表长度
-     * @return
+     * @return  链表长度
      */
     public int length() {
         return this.size;
@@ -202,7 +202,7 @@ public class SinglyLinkedList<T> {
 
     /**
      * 打印输出单链表
-     * @return
+     * @return  整个单链表
      */
     @Override
     public String toString() {

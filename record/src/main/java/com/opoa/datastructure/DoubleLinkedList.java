@@ -65,8 +65,8 @@ public class DoubleLinkedList<T> {
 
     /**
      * 根据下标获取结点
-     * @param index
-     * @return
+     * @param index  下标参数
+     * @return       对应结点
      */
     public Node getNode(int index) {
 
@@ -87,8 +87,8 @@ public class DoubleLinkedList<T> {
 
     /**
      * 根据元素值返回对应结点
-     * @param t
-     * @return
+     * @param t  要查找的元素值
+     * @return   对应结点
      */
     public Node getNode(T t) {
 
@@ -103,8 +103,8 @@ public class DoubleLinkedList<T> {
 
     /**
      * 新增一个结点
-     * @param t
-     * @return
+     * @param t  要插入的元素值
+     * @return   插入是否成功
      */
     public boolean add(T t) {
 
@@ -128,7 +128,7 @@ public class DoubleLinkedList<T> {
 
     /**
      * 打印输出双链表
-     * @return
+     * @return  整个双链表
      */
     @Override
     public String toString() {
