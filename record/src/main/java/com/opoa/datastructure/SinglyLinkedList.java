@@ -2,7 +2,7 @@ package com.opoa.datastructure;
 
 
 /**
- * @program: head-first-java->SinglyLinkedList
+ * @program: SinglyLinkedList
  * @description: 自定义单链表
  * @author: opoa
  * @create: 2021-02-28 20:21
@@ -76,7 +76,7 @@ public class SinglyLinkedList<T> {
     }
 
     /**
-     * 根据元素值返回对应下标
+     * 根据元素值返回对应结点
      * @param t
      * @return
      */
