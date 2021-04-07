@@ -15,9 +15,9 @@ public class TestSinglyLinkedList {
         // 初始化一个单链表
         SinglyLinkedList<String> linkedList = new SinglyLinkedList<>();
         linkedList.insertFirst("2");
-        linkedList.insert("1",0);
-        linkedList.insert("0",0);
-        linkedList.insert("2",0);
+        linkedList.insert(0, "1");
+        linkedList.insert(0, "0");
+        linkedList.insert(0, "2");
         linkedList.insertLast("5");
         System.out.println(linkedList);
         SinglyLinkedList<String>.Node remove = linkedList.remove("5");

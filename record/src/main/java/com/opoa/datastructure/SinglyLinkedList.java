@@ -98,7 +98,7 @@ public class SinglyLinkedList<T> {
      * @param index  要插入的下标
      * @return       插入是否成功
      */
-    public boolean insert(T t, int index) {
+    public boolean insert(int index, T t) {
 
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("非法下标参数");
@@ -129,7 +129,7 @@ public class SinglyLinkedList<T> {
      * @return   插入是否成功
      */
     public boolean insertFirst(T t) {
-        return insert(t, 0);
+        return insert(0, t);
     }
 
     /**
@@ -138,7 +138,7 @@ public class SinglyLinkedList<T> {
      * @return   插入是否成功
      */
     public boolean insertLast(T t) {
-        return insert(t, size);
+        return insert(size, t);
     }
 
     /**
@@ -197,7 +197,7 @@ public class SinglyLinkedList<T> {
      * @return  链表长度
      */
     public int length() {
-        return this.size;
+        return size;
     }
 
     /**
