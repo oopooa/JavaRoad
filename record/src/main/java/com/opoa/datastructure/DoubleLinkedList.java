@@ -1,6 +1,8 @@
 package com.opoa.datastructure;
 
 
+import java.util.NoSuchElementException;
+
 /**
  * @program: DoubleLinkedList
  * @description: 自定义双链表
@@ -188,6 +190,78 @@ public class DoubleLinkedList<T> {
         } else {
             insertBefore(t, getNode(index));
         }
+    }
+
+    /**
+     * 根据元素删除某个结点
+     * @param t  要删除的元素
+     * @return   删除的元素
+     */
+    public T remove(T t) {
+
+        Node node = getNode(t);
+        if (null == node) {
+            throw new NoSuchElementException();
+        }
+        return unlink(node);
+    }
+
+    /**
+     * 根据下标删除某个结点
+     * @param index  要删除结点的下标
+     * @return       删除的元素
+     */
+    public T remove(int index) {
+
+        if (index < 0 || index > size) {
+            throw new IllegalArgumentException("非法下标参数");
+        }
+
+        return  unlink(getNode(index));
+    }
+
+    /**
+     * 删除某个结点
+     * @param node  要删除的结点
+     * @return      删除结点的数据
+     */
+    private T unlink(Node node) {
+
+        // 保存原结点数据
+        T oldVal = node.t;
+        // 要删除结点的前驱结点
+        Node prev = node.prev;
+        // 要删除结点的后驱结点
+        Node next = node.next;
+
+        // 如果前驱结点为空
+        if (null == prev) {
+            // 表明要删除的结点是头结点
+            // 把后驱结点设置为头结点
+            head = next;
+        } else {
+            // 把后驱结点地址赋值给前驱结点的next
+            prev.next = next;
+            // 把要删除结点的prev设置为空
+            node.prev = null;
+        }
+
+        // 如果后驱结点为空
+        if (null == next) {
+            // 表明要删除的结点是尾结点
+            // 把前驱结点设置为尾结点
+            tail = prev;
+        } else {
+            // 把前驱结点地址赋值给后驱结点的prev
+            next.prev = prev;
+            // 把要删除结点的next设置为空
+            node.next = null;
+        }
+
+        // 把要删除结点的数据设置为null 帮助GC
+        node.t = null;
+        size --;
+        return oldVal;
     }
 
     /**

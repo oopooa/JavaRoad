@@ -29,5 +29,13 @@ public class TestDoubleLinkedList {
         System.out.println("修改链表下标为0的位置值为start");
         linkedList.set(0, "start");
         System.out.println(linkedList);
+        System.out.println("删除数据为1的结点");
+        linkedList.remove("1");
+        System.out.println(linkedList);
+        System.out.println("删除下标为2的结点");
+        linkedList.remove(2);
+        System.out.println(linkedList);
+        System.out.println("链表的长度为: " + linkedList.length());
+
     }
 }
