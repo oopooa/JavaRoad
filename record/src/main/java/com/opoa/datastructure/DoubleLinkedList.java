@@ -1,6 +1,7 @@
 package com.opoa.datastructure;
 
 
+import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
 /**
@@ -72,9 +73,7 @@ public class DoubleLinkedList<T> {
      */
     public Node getNode(int index) {
 
-        if (index < 0 || index > size) {
-            throw new IllegalArgumentException("非法下标参数");
-        }
+        checkIndex(index);
 
         Node curNode = this.head;
         // 下标为0 直接返回头结点
@@ -180,9 +179,7 @@ public class DoubleLinkedList<T> {
      */
     public void insert(T t, int index) {
 
-        if (index < 0 || index > size) {
-            throw new IllegalArgumentException("非法下标参数");
-        }
+        checkIndex(index);
 
         // 判断是否新增尾结点
         if (index == size) {
@@ -213,10 +210,7 @@ public class DoubleLinkedList<T> {
      */
     public T remove(int index) {
 
-        if (index < 0 || index > size) {
-            throw new IllegalArgumentException("非法下标参数");
-        }
-
+        checkIndex(index);
         return  unlink(getNode(index));
     }
 
@@ -271,10 +265,7 @@ public class DoubleLinkedList<T> {
      */
     public T set(int index, T t) {
 
-        if (index < 0 || index > size) {
-            throw new IllegalArgumentException("非法下标参数");
-        }
-
+        checkIndex(index);
         // 获取要设置的结点
         Node old = getNode(index);
         // 保存结点中旧的数据
@@ -283,6 +274,16 @@ public class DoubleLinkedList<T> {
         old.t = t;
         // 返回旧值
         return oldVal;
+    }
+
+    /**
+     * 检查下标参数合法性
+     * @param index  要检查的下标参数
+     */
+    private void checkIndex(int index) {
+        if (index < 0 || index > size) {
+            throw new IllegalArgumentException("非法下标参数");
+        }
     }
 
     /**

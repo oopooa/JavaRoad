@@ -61,9 +61,7 @@ public class SinglyLinkedList<T> {
      */
     public Node getNode(int index) {
 
-        if (index < 0 || index > size) {
-            throw new IllegalArgumentException("非法下标参数");
-        }
+        checkIndex(index);
         Node curNode = this.head;
         // 下标为0 直接返回头结点
         if (index == 0) {
@@ -100,10 +98,7 @@ public class SinglyLinkedList<T> {
      */
     public boolean insert(int index, T t) {
 
-        if (index < 0 || index > size) {
-            throw new IllegalArgumentException("非法下标参数");
-        }
-
+        checkIndex(index);
         Node node = new Node(t);
         // 链表头部插入结点
         if (index == 0) {
@@ -121,6 +116,16 @@ public class SinglyLinkedList<T> {
         preNode.next = node;
         this.size++;
         return true;
+    }
+
+    /**
+     * 检查下标参数是否合法
+     * @param index 要检查的下标参数
+     */
+    private void checkIndex(int index) {
+        if (index < 0 || index > size) {
+            throw new IllegalArgumentException("非法下标参数");
+        }
     }
 
     /**
@@ -148,9 +153,7 @@ public class SinglyLinkedList<T> {
      */
     public Node remove(int index) {
 
-        if (index < 0 || index > size) {
-            throw new IllegalArgumentException("非法下标参数");
-        }
+        checkIndex(index);
         Node removeNode = null;
         // 删除头结点
         if (index == 0) {
