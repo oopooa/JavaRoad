@@ -1,7 +1,6 @@
 package com.opoa.datastructure;
 
 
-import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
 /**
