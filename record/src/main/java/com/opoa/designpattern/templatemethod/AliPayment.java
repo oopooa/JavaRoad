@@ -1,6 +1,8 @@
 package com.opoa.designpattern.templatemethod;
 
 
+import java.util.Random;
+
 /**
  * @program: JavaRoad->AliPayment
  * @description: 支付宝支付
@@ -23,5 +25,12 @@ public class AliPayment extends AbstractPaymentProcess {
     @Override
     protected void paymentResult() {
 
+        boolean success = new Random().nextBoolean();
+        System.out.println("支付宝支付结果:");
+        if (success) {
+            System.out.println("支付成功!");
+        } else {
+            System.out.println("支付失败!");
+        }
     }
 }

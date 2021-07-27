@@ -1,5 +1,7 @@
 package com.opoa.designpattern.templatemethod;
 
+import java.util.Random;
+
 /**
  * @program: JavaRoad->WeChatPayment
  * @description: 微信支付
@@ -23,5 +25,12 @@ public class WeChatPayment extends AbstractPaymentProcess {
     @Override
     protected void paymentResult() {
 
+        boolean success = new Random().nextBoolean();
+        System.out.println("微信支付结果:");
+        if (success) {
+            System.out.println("支付成功!");
+        } else {
+            System.out.println("支付失败!");
+        }
     }
 }
